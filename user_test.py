@@ -1,6 +1,6 @@
 import unittest
 import random #import the unittest module
-from credentials import user
+from credential import user
 
 class TestCredentials(unittest.TestCase):
     '''

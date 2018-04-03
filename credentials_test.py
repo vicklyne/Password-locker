@@ -1,6 +1,6 @@
 import unittest #import the unittest module
 import pyperclip
-from credentials import credentials #importing credentials class
+from credential import credentials #importing credentials class
 
 class TestCredentials(unittest.TestCase):
     '''
@@ -65,6 +65,7 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(found_account.user_name, test_account.user_name)
 
     def test_account_exists(self):
+        '''
         test to check if account really exists
         '''
         self.new_account.save_account()
@@ -72,10 +73,12 @@ class TestCredentials(unittest.TestCase):
         test_account.save_account()
         account_exists = credentials.account_exists("Account")
         self.assertTrue(account_exists)
+
     def test_display_accounts(self):
         '''
         test to display accounts
         '''
         self.assertEqual(credentials.display_accounts(),credentials.credential_list)
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.6
 import random
-from credentials import credentials
-from credentials import user
+from credential import credentials
+from credential import user
 #methods for user
 def create_user(name,pwd):
     '''
